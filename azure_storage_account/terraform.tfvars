@@ -1,7 +1,7 @@
 storage_account = {
 
 sa1 = {
-    name                     = "shubhampratapprod1"
+    name                     = "shubhamprod1"
     resource_group_name      = "shubham_rg_test"
     location                 = "eastus"
     account_tier             = "Standard"
