@@ -1,84 +1,64 @@
-# ☁️ Azure DevOps Infrastructure (DevopsInfra)
+☁️ 𝐀𝐳𝐮𝐫𝐞 𝐃𝐞𝐯𝐎𝐩𝐬 𝐈𝐧𝐟𝐫𝐚𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞 (𝐃𝐞𝐯𝐨𝐩𝐬𝐈𝐧𝐟𝐫𝐚)
+𝐓𝐡𝐢𝐬 𝐫𝐞𝐩𝐨𝐬𝐢𝐭𝐨𝐫𝐲 𝐜𝐨𝐧𝐭𝐚𝐢𝐧𝐬 𝐭𝐡𝐞 𝐈𝐧𝐟𝐫𝐚𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞 𝐚𝐬 𝐂𝐨𝐝𝐞 (𝐈𝐚𝐂) 𝐫𝐞𝐪𝐮𝐢𝐫𝐞𝐝 𝐭𝐨 𝐩𝐫𝐨𝐯𝐢𝐬𝐢𝐨𝐧 𝐚𝐧𝐝 𝐦𝐚𝐧𝐚𝐠𝐞 𝐜𝐥𝐨𝐮𝐝 𝐢𝐧𝐟𝐫𝐚𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞 𝐨𝐧 𝐌𝐢𝐜𝐫𝐨𝐬𝐨𝐟𝐭 𝐀𝐳𝐮𝐫𝐞 𝐮𝐬𝐢𝐧𝐠 **𝐓𝐞𝐫𝐫𝐚𝐟𝐨𝐫𝐦**. 𝐓𝐡𝐞 𝐩𝐫𝐨𝐣𝐞𝐜𝐭 𝐢𝐬 𝐝𝐞𝐬𝐢𝐠𝐧𝐞𝐝 𝐰𝐢𝐭𝐡 𝐚 𝐡𝐢𝐠𝐡𝐥𝐲 𝐦𝐨𝐝𝐮𝐥𝐚𝐫 𝐚𝐫𝐜𝐡𝐢𝐭𝐞𝐜𝐭𝐮𝐫𝐞, 𝐞𝐧𝐬𝐮𝐫𝐢𝐧𝐠 𝐫𝐞𝐮𝐬𝐚𝐛𝐢𝐥𝐢𝐭𝐲, 𝐬𝐜𝐚𝐥𝐚𝐛𝐢𝐥𝐢𝐭𝐲, 𝐚𝐧𝐝 𝐞𝐚𝐬𝐞 𝐨𝐟 𝐦𝐚𝐢𝐧𝐭𝐞𝐧𝐚𝐧𝐜𝐞.
 
-This repository contains the Infrastructure as Code (IaC) required to provision and manage cloud infrastructure on Microsoft Azure using **Terraform**. The project is designed with a highly modular architecture, ensuring reusability, scalability, and ease of maintenance.
+## 🏗️ 𝐀𝐫𝐜𝐡𝐢𝐭𝐞𝐜𝐭𝐮𝐫𝐞 𝐎𝐯𝐞𝐫𝐯𝐢𝐞𝐰
 
-## 🏗️ Architecture Overview
+𝐓𝐡𝐢𝐬 𝐩𝐫𝐨𝐣𝐞𝐜𝐭 𝐩𝐫𝐨𝐯𝐢𝐬𝐢𝐨𝐧𝐬 𝐚 𝐬𝐞𝐜𝐮𝐫𝐞 𝐚𝐧𝐝 𝐬𝐜𝐚𝐥𝐚𝐛𝐥𝐞 𝐧𝐞𝐭𝐰𝐨𝐫𝐤 𝐭𝐨𝐩𝐨𝐥𝐨𝐠𝐲 𝐚𝐧𝐝 𝐜𝐨𝐦𝐩𝐮𝐭𝐞 𝐞𝐧𝐯𝐢𝐫𝐨𝐧𝐦𝐞𝐧𝐭. 𝐊𝐞𝐲 𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐢𝐧𝐜𝐥𝐮𝐝𝐞:
+* **𝐃𝐲𝐧𝐚𝐦𝐢𝐜 𝐑𝐞𝐬𝐨𝐮𝐫𝐜𝐞 𝐂𝐫𝐞𝐚𝐭𝐢𝐨𝐧:** 𝐔𝐭𝐢𝐥𝐢𝐳𝐞𝐬 𝐚𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐓𝐞𝐫𝐫𝐚𝐟𝐨𝐫𝐦 𝐟𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐬 𝐥𝐢𝐤𝐞 `𝐟𝐨𝐫_𝐞𝐚𝐜𝐡` 𝐭𝐨 𝐝𝐲𝐧𝐚𝐦𝐢𝐜𝐚𝐥𝐥𝐲 𝐝𝐞𝐩𝐥𝐨𝐲 𝐦𝐮𝐥𝐭𝐢𝐩𝐥𝐞 𝐬𝐮𝐛𝐧𝐞𝐭𝐬, 𝐕𝐍𝐞𝐭𝐬, 𝐚𝐧𝐝 𝐨𝐭𝐡𝐞𝐫 𝐫𝐞𝐬𝐨𝐮𝐫𝐜𝐞𝐬.
+* **𝐌𝐨𝐝𝐮𝐥𝐚𝐫 𝐃𝐞𝐬𝐢𝐠𝐧:** 𝐑𝐞𝐬𝐨𝐮𝐫𝐜𝐞𝐬 𝐚𝐫𝐞 𝐜𝐥𝐞𝐚𝐧𝐥𝐲 𝐬𝐞𝐩𝐚𝐫𝐚𝐭𝐞𝐝 𝐢𝐧𝐭𝐨 𝐢𝐧𝐝𝐢𝐯𝐢𝐝𝐮𝐚𝐥 𝐦𝐨𝐝𝐮𝐥𝐞𝐬.
+* **𝐒𝐞𝐜𝐮𝐫𝐞 𝐀𝐜𝐜𝐞𝐬𝐬:** 𝐈𝐦𝐩𝐥𝐞𝐦𝐞𝐧𝐭𝐬 𝐀𝐳𝐮𝐫𝐞 𝐁𝐚𝐬𝐭𝐢𝐨𝐧 𝐟𝐨𝐫 𝐬𝐞𝐜𝐮𝐫𝐞 𝐑𝐃𝐏/𝐒𝐒𝐇 𝐜𝐨𝐧𝐧𝐞𝐜𝐭𝐢𝐯𝐢𝐭𝐲 𝐭𝐨 𝐕𝐢𝐫𝐭𝐮𝐚𝐥 𝐌𝐚𝐜𝐡𝐢𝐧𝐞𝐬.
 
-This project provisions a secure and scalable network topology and compute environment. Key features include:
-* **Dynamic Resource Creation:** Utilizes advanced Terraform functions like `for_each` to dynamically deploy multiple subnets, VNets, and other resources.
-* **Modular Design:** Resources are cleanly separated into individual modules.
-* **Secure Access:** Implements Azure Bastion for secure RDP/SSH connectivity to Virtual Machines.
+## 📂 𝐑𝐞𝐩𝐨𝐬𝐢𝐭𝐨𝐫𝐲 𝐒𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞
 
-## 📂 Repository Structure
+𝐓𝐡𝐞 𝐜𝐨𝐝𝐞 𝐢𝐬 𝐨𝐫𝐠𝐚𝐧𝐢𝐳𝐞𝐝 𝐢𝐧𝐭𝐨 𝐝𝐢𝐬𝐜𝐫𝐞𝐭𝐞 𝐦𝐨𝐝𝐮𝐥𝐞𝐬 𝐟𝐨𝐫 𝐝𝐢𝐟𝐟𝐞𝐫𝐞𝐧𝐭 𝐀𝐳𝐮𝐫𝐞 𝐫𝐞𝐬𝐨𝐮𝐫𝐜𝐞𝐬:
 
-The code is organized into discrete modules for different Azure resources:
+𝐃𝐞𝐯𝐨𝐩𝐬𝐈𝐧𝐟𝐫𝐚/
+├── 𝐚𝐳𝐮𝐫𝐞_𝐛𝐚𝐬𝐭𝐢𝐨𝐧/          # 𝐏𝐫𝐨𝐯𝐢𝐬𝐢𝐨𝐧𝐬 𝐀𝐳𝐮𝐫𝐞 𝐁𝐚𝐬𝐭𝐢𝐨𝐧 𝐇𝐨𝐬𝐭 𝐟𝐨𝐫 𝐬𝐞𝐜𝐮𝐫𝐞 𝐕𝐌 𝐚𝐜𝐜𝐞𝐬𝐬
+├── 𝐚𝐳𝐮𝐫𝐞_𝐫𝐞𝐬𝐨𝐮𝐫𝐜𝐞_𝐠𝐫𝐨𝐮𝐩/   # 𝐌𝐚𝐧𝐚𝐠𝐞𝐬 𝐟𝐨𝐮𝐧𝐝𝐚𝐭𝐢𝐨𝐧𝐚𝐥 𝐑𝐞𝐬𝐨𝐮𝐫𝐜𝐞 𝐆𝐫𝐨𝐮𝐩𝐬
+├── 𝐚𝐳𝐮𝐫𝐞_𝐬𝐭𝐨𝐫𝐚𝐠𝐞_𝐚𝐜𝐜𝐨𝐮𝐧𝐭/  # 𝐏𝐫𝐨𝐯𝐢𝐬𝐢𝐨𝐧𝐬 𝐬𝐜𝐚𝐥𝐚𝐛𝐥𝐞 𝐀𝐳𝐮𝐫𝐞 𝐒𝐭𝐨𝐫𝐚𝐠𝐞 𝐀𝐜𝐜𝐨𝐮𝐧𝐭𝐬
+├── 𝐚𝐳𝐮𝐫𝐞_𝐬𝐮𝐛𝐧𝐞𝐭/           # 𝐌𝐚𝐧𝐚𝐠𝐞𝐬 𝐕𝐍𝐞𝐭 𝐒𝐮𝐛𝐧𝐞𝐭𝐬 𝐝𝐲𝐧𝐚𝐦𝐢𝐜𝐚𝐥𝐥𝐲
+├── 𝐚𝐳𝐮𝐫𝐞_𝐯𝐢𝐫𝐭𝐮𝐚𝐥_𝐦𝐚𝐜𝐡𝐢𝐧𝐞/  # 𝐃𝐞𝐩𝐥𝐨𝐲𝐬 𝐀𝐳𝐮𝐫𝐞 𝐕𝐢𝐫𝐭𝐮𝐚𝐥 𝐌𝐚𝐜𝐡𝐢𝐧𝐞𝐬 (𝐋𝐢𝐧𝐮𝐱/𝐖𝐢𝐧𝐝𝐨𝐰𝐬)
+├── 𝐚𝐳𝐮𝐫𝐞_𝐯𝐢𝐫𝐭𝐮𝐚𝐥_𝐧𝐞𝐭𝐰𝐨𝐫𝐤/  # 𝐒𝐞𝐭𝐬 𝐮𝐩 𝐭𝐡𝐞 𝐩𝐫𝐢𝐦𝐚𝐫𝐲 𝐕𝐢𝐫𝐭𝐮𝐚𝐥 𝐍𝐞𝐭𝐰𝐨𝐫𝐤𝐬
+├── 𝐚𝐳𝐮𝐫𝐞_𝐯𝐧𝐞𝐭_𝐩𝐞𝐞𝐫𝐢𝐧𝐠/     # 𝐂𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐞𝐬 𝐩𝐞𝐞𝐫𝐢𝐧𝐠 𝐛𝐞𝐭𝐰𝐞𝐞𝐧 𝐝𝐢𝐟𝐟𝐞𝐫𝐞𝐧𝐭 𝐕𝐍𝐞𝐭𝐬
+├── .𝐠𝐢𝐭𝐢𝐠𝐧𝐨𝐫𝐞              # 𝐒𝐭𝐚𝐧𝐝𝐚𝐫𝐝 𝐓𝐞𝐫𝐫𝐚𝐟𝐨𝐫𝐦 𝐢𝐠𝐧𝐨𝐫𝐞 𝐟𝐢𝐥𝐞
+├── 𝐦𝐚𝐢𝐧.𝐭𝐟                 # 𝐑𝐨𝐨𝐭 𝐦𝐨𝐝𝐮𝐥𝐞 𝐭𝐲𝐢𝐧𝐠 𝐚𝐥𝐥 𝐬𝐮𝐛-𝐦𝐨𝐝𝐮𝐥𝐞𝐬 𝐭𝐨𝐠𝐞𝐭𝐡𝐞𝐫
+├── 𝐯𝐚𝐫𝐢𝐚𝐛𝐥𝐞𝐬.𝐭𝐟            # 𝐆𝐥𝐨𝐛𝐚𝐥 𝐯𝐚𝐫𝐢𝐚𝐛𝐥𝐞 𝐝𝐞𝐜𝐥𝐚𝐫𝐚𝐭𝐢𝐨𝐧𝐬
+└── 𝐭𝐞𝐫𝐫𝐚𝐟𝐨𝐫𝐦.𝐭𝐟𝐯𝐚𝐫𝐬        # 𝐕𝐚𝐥𝐮𝐞𝐬 𝐟𝐨𝐫 𝐭𝐡𝐞 𝐝𝐞𝐟𝐢𝐧𝐞𝐝 𝐯𝐚𝐫𝐢𝐚𝐛𝐥𝐞𝐬 (𝐍𝐨𝐭 𝐜𝐨𝐦𝐦𝐢𝐭𝐭𝐞𝐝 𝐭𝐨 𝐆𝐢𝐭)
 
-DevopsInfra/
-├── azure_bastion/          # Provisions Azure Bastion Host for secure VM access
-├── azure_resource_group/   # Manages foundational Resource Groups
-├── azure_storage_account/  # Provisions scalable Azure Storage Accounts
-├── azure_subnet/           # Manages VNet Subnets dynamically
-├── azure_virtual_machine/  # Deploys Azure Virtual Machines (Linux/Windows)
-├── azure_virtual_network/  # Sets up the primary Virtual Networks
-├── azure_vnet_peering/     # Configures peering between different VNets
-├── .gitignore              # Standard Terraform ignore file
-├── main.tf                 # Root module tying all sub-modules together
-├── variables.tf            # Global variable declarations
-└── terraform.tfvars        # Values for the defined variables (Not committed to Git)
+🛠️ 𝐏𝐫𝐞𝐫𝐞𝐪𝐮𝐢𝐬𝐢𝐭𝐞𝐬 𝐁𝐞𝐟𝐨𝐫𝐞 𝐲𝐨𝐮 𝐛𝐞𝐠𝐢𝐧, 𝐞𝐧𝐬𝐮𝐫𝐞 𝐲𝐨𝐮 𝐡𝐚𝐯𝐞 𝐭𝐡𝐞 𝐟𝐨𝐥𝐥𝐨𝐰𝐢𝐧𝐠 𝐢𝐧𝐬𝐭𝐚𝐥𝐥𝐞𝐝 𝐚𝐧𝐝 𝐜𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐞𝐝:
 
+𝐓𝐞𝐫𝐫𝐚𝐟𝐨𝐫𝐦 (𝐯𝟏.𝟎.𝟎 𝐨𝐫 𝐡𝐢𝐠𝐡𝐞𝐫)
 
-🛠️ Prerequisites
-Before you begin, ensure you have the following installed and configured:
+𝐀𝐳𝐮𝐫𝐞 𝐂𝐋𝐈
 
-Terraform (v1.0.0 or higher)
+𝐀𝐜𝐭𝐢𝐯𝐞 𝐌𝐢𝐜𝐫𝐨𝐬𝐨𝐟𝐭 𝐀𝐳𝐮𝐫𝐞 𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐩𝐭𝐢𝐨𝐧 𝐰𝐢𝐭𝐡 𝐚𝐩𝐩𝐫𝐨𝐩𝐫𝐢𝐚𝐭𝐞 𝐂𝐨𝐧𝐭𝐫𝐢𝐛𝐮𝐭𝐨𝐫/𝐎𝐰𝐧𝐞𝐫 𝐑𝐁𝐀𝐂 𝐩𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧𝐬.
 
-Azure CLI
+🚀 𝐃𝐞𝐩𝐥𝐨𝐲𝐦𝐞𝐧𝐭 𝐆𝐮𝐢𝐝𝐞 𝐅𝐨𝐥𝐥𝐨𝐰 𝐭𝐡𝐞𝐬𝐞 𝐬𝐭𝐞𝐩𝐬 𝐭𝐨 𝐝𝐞𝐩𝐥𝐨𝐲 𝐭𝐡𝐞 𝐢𝐧𝐟𝐫𝐚𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞:
 
-Active Microsoft Azure Subscription with appropriate Contributor/Owner RBAC permissions.
+𝐀𝐮𝐭𝐡𝐞𝐧𝐭𝐢𝐜𝐚𝐭𝐞 𝐰𝐢𝐭𝐡 𝐀𝐳𝐮𝐫𝐞 𝐅𝐢𝐫𝐬𝐭, 𝐥𝐨𝐠 𝐢𝐧 𝐭𝐨 𝐲𝐨𝐮𝐫 𝐀𝐳𝐮𝐫𝐞 𝐚𝐜𝐜𝐨𝐮𝐧𝐭 𝐮𝐬𝐢𝐧𝐠 𝐭𝐡𝐞 𝐀𝐳𝐮𝐫𝐞 𝐂𝐋𝐈:
+𝐁𝐚𝐬𝐡 𝐚𝐳 𝐥𝐨𝐠𝐢𝐧 𝐚𝐳 𝐚𝐜𝐜𝐨𝐮𝐧𝐭 𝐬𝐞𝐭 --𝐬𝐮𝐛𝐬𝐜𝐫𝐢𝐩𝐭𝐢𝐨𝐧 "<𝐘𝐎𝐔𝐑_𝐒𝐔𝐁𝐒𝐂𝐑𝐈𝐏𝐓𝐈𝐎𝐍_𝐈𝐃>"
 
-🚀 Deployment Guide
-Follow these steps to deploy the infrastructure:
+𝐈𝐧𝐢𝐭𝐢𝐚𝐥𝐢𝐳𝐞 𝐓𝐞𝐫𝐫𝐚𝐟𝐨𝐫𝐦 𝐈𝐧𝐢𝐭𝐢𝐚𝐥𝐢𝐳𝐞 𝐭𝐡𝐞 𝐰𝐨𝐫𝐤𝐢𝐧𝐠 𝐝𝐢𝐫𝐞𝐜𝐭𝐨𝐫𝐲 𝐜𝐨𝐧𝐭𝐚𝐢𝐧𝐢𝐧𝐠 𝐓𝐞𝐫𝐫𝐚𝐟𝐨𝐫𝐦 𝐜𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚𝐭𝐢𝐨𝐧 𝐟𝐢𝐥𝐞𝐬. 𝐓𝐡𝐢𝐬 𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐬 𝐭𝐡𝐞 𝐫𝐞𝐪𝐮𝐢𝐫𝐞𝐝 𝐀𝐳𝐮𝐫𝐞 𝐩𝐫𝐨𝐯𝐢𝐝𝐞𝐫 𝐩𝐥𝐮𝐠𝐢𝐧𝐬.
+𝐁𝐚𝐬𝐡 𝐭𝐞𝐫𝐫𝐚𝐟𝐨𝐫𝐦 𝐢𝐧𝐢𝐭
 
-1. Authenticate with Azure
-First, log in to your Azure account using the Azure CLI:
+𝐑𝐞𝐯𝐢𝐞𝐰 𝐭𝐡𝐞 𝐄𝐱𝐞𝐜𝐮𝐭𝐢𝐨𝐧 𝐏𝐥𝐚𝐧 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞 𝐚𝐧𝐝 𝐬𝐡𝐨𝐰 𝐚𝐧 𝐞𝐱𝐞𝐜𝐮𝐭𝐢𝐨𝐧 𝐩𝐥𝐚𝐧 𝐭𝐨 𝐬𝐞𝐞 𝐞𝐱𝐚𝐜𝐭𝐥𝐲 𝐰𝐡𝐚𝐭 𝐢𝐧𝐟𝐫𝐚𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐜𝐫𝐞𝐚𝐭𝐞𝐝, 𝐮𝐩𝐝𝐚𝐭𝐞𝐝, 𝐨𝐫 𝐝𝐞𝐬𝐭𝐫𝐨𝐲𝐞𝐝.
+𝐁𝐚𝐬𝐡 𝐭𝐞𝐫𝐫𝐚𝐟𝐨𝐫𝐦 𝐩𝐥𝐚𝐧
 
-Bash
-az login
-az account set --subscription "<YOUR_SUBSCRIPTION_ID>"
+𝐀𝐩𝐩𝐥𝐲 𝐂𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚𝐭𝐢𝐨𝐧 𝐄𝐱𝐞𝐜𝐮𝐭𝐞 𝐭𝐡𝐞 𝐚𝐜𝐭𝐢𝐨𝐧𝐬 𝐩𝐫𝐨𝐩𝐨𝐬𝐞𝐝 𝐢𝐧 𝐚 𝐓𝐞𝐫𝐫𝐚𝐟𝐨𝐫𝐦 𝐩𝐥𝐚𝐧.
+𝐁𝐚𝐬𝐡 𝐭𝐞𝐫𝐫𝐚𝐟𝐨𝐫𝐦 𝐚𝐩𝐩𝐥𝐲 -𝐚𝐮𝐭𝐨-𝐚𝐩𝐩𝐫𝐨𝐯𝐞
 
-2. Initialize Terraform
-Initialize the working directory containing Terraform configuration files. This downloads the required Azure provider plugins.
+🔒 𝐒𝐭𝐚𝐭𝐞 𝐌𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭 𝐂𝐮𝐫𝐫𝐞𝐧𝐭𝐥𝐲, 𝐭𝐡𝐢𝐬 𝐫𝐞𝐩𝐨𝐬𝐢𝐭𝐨𝐫𝐲 𝐢𝐬 𝐜𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐞𝐝 𝐟𝐨𝐫 𝐥𝐨𝐜𝐚𝐥 𝐬𝐭𝐚𝐭𝐞 𝐦𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭 (𝐨𝐫 𝐮𝐩𝐝𝐚𝐭𝐞 𝐭𝐡𝐢𝐬 𝐢𝐟 𝐮𝐬𝐢𝐧𝐠 𝐫𝐞𝐦𝐨𝐭𝐞 𝐛𝐚𝐜𝐤𝐞𝐧𝐝). 𝐅𝐨𝐫 𝐩𝐫𝐨𝐝𝐮𝐜𝐭𝐢𝐨𝐧 𝐞𝐧𝐯𝐢𝐫𝐨𝐧𝐦𝐞𝐧𝐭𝐬, 𝐢𝐭 𝐢𝐬 𝐡𝐢𝐠𝐡𝐥𝐲 𝐫𝐞𝐜𝐨𝐦𝐦𝐞𝐧𝐝𝐞𝐝 𝐭𝐨 𝐜𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐞 𝐚 𝐑𝐞𝐦𝐨𝐭𝐞 𝐁𝐚𝐜𝐤𝐞𝐧𝐝 𝐮𝐬𝐢𝐧𝐠 𝐀𝐳𝐮𝐫𝐞 𝐁𝐥𝐨𝐛 𝐒𝐭𝐨𝐫𝐚𝐠𝐞 𝐭𝐨 𝐬𝐞𝐜𝐮𝐫𝐞𝐥𝐲 𝐬𝐭𝐨𝐫𝐞 𝐭𝐡𝐞 𝐭𝐞𝐫𝐫𝐚𝐟𝐨𝐫𝐦.𝐭𝐟𝐬𝐭𝐚𝐭𝐞 𝐟𝐢𝐥𝐞 𝐚𝐧𝐝 𝐦𝐚𝐧𝐚𝐠𝐞 𝐬𝐭𝐚𝐭𝐞 𝐥𝐨𝐜𝐤𝐬.
 
-Bash
-terraform init
+🤝 𝐂𝐨𝐧𝐭𝐫𝐢𝐛𝐮𝐭𝐢𝐧𝐠 𝐅𝐨𝐫𝐤 𝐭𝐡𝐞 𝐫𝐞𝐩𝐨𝐬𝐢𝐭𝐨𝐫𝐲
 
-3. Review the Execution Plan
-Generate and show an execution plan to see exactly what infrastructure will be created, updated, or destroyed.
+𝐂𝐫𝐞𝐚𝐭𝐞 𝐲𝐨𝐮𝐫 𝐟𝐞𝐚𝐭𝐮𝐫𝐞 𝐛𝐫𝐚𝐧𝐜𝐡 (𝐠𝐢𝐭 𝐜𝐡𝐞𝐜𝐤𝐨𝐮𝐭 -𝐛 𝐟𝐞𝐚𝐭𝐮𝐫𝐞/𝐚𝐦𝐚𝐳𝐢𝐧𝐠-𝐟𝐞𝐚𝐭𝐮𝐫𝐞)
 
-Bash
-terraform plan
+𝐅𝐨𝐫𝐦𝐚𝐭 𝐲𝐨𝐮𝐫 𝐜𝐨𝐝𝐞 (𝐭𝐞𝐫𝐫𝐚𝐟𝐨𝐫𝐦 𝐟𝐦𝐭)
 
-4. Apply Configuration
-Execute the actions proposed in a Terraform plan.
+𝐕𝐚𝐥𝐢𝐝𝐚𝐭𝐞 𝐲𝐨𝐮𝐫 𝐜𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚𝐭𝐢𝐨𝐧𝐬 (𝐭𝐞𝐫𝐫𝐚𝐟𝐨𝐫𝐦 𝐯𝐚𝐥𝐢𝐝𝐚𝐭𝐞)
 
-Bash
-terraform apply -auto-approve
+𝐂𝐨𝐦𝐦𝐢𝐭 𝐲𝐨𝐮𝐫 𝐜𝐡𝐚𝐧𝐠𝐞𝐬 (𝐠𝐢𝐭 𝐜𝐨𝐦𝐦𝐢𝐭 -𝐦 '𝐀𝐝𝐝 𝐬𝐨𝐦𝐞 𝐚𝐦𝐚𝐳𝐢𝐧𝐠 𝐟𝐞𝐚𝐭𝐮𝐫𝐞')
 
+𝐏𝐮𝐬𝐡 𝐭𝐨 𝐭𝐡𝐞 𝐛𝐫𝐚𝐧𝐜𝐡 (𝐠𝐢𝐭 𝐩𝐮𝐬𝐡 𝐨𝐫𝐢𝐠𝐢𝐧 𝐟𝐞𝐚𝐭𝐮𝐫𝐞/𝐚𝐦𝐚𝐳𝐢𝐧𝐠-𝐟𝐞𝐚𝐭𝐮𝐫𝐞)
 
-🔒 State Management
-Currently, this repository is configured for local state management (or update this if using remote backend). For production environments, it is highly recommended to configure a Remote Backend using Azure Blob Storage to securely store the terraform.tfstate file and manage state locks.
-
-🤝 Contributing
-Fork the repository
-
-Create your feature branch (git checkout -b feature/amazing-feature)
-
-Format your code (terraform fmt)
-
-Validate your configurations (terraform validate)
-
-Commit your changes (git commit -m 'Add some amazing feature')
-
-Push to the branch (git push origin feature/amazing-feature)
-
-Open a Pull Request
+𝐎𝐩𝐞𝐧 𝐚 𝐏𝐮𝐥𝐥 𝐑𝐞𝐪𝐮𝐞𝐬𝐭
