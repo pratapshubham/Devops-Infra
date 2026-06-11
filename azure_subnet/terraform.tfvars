@@ -11,7 +11,7 @@ vnet_subnet = {
         name  = "prod-subnet"
         resource_group_name  = "shubham_rg_test1"
         virtual_network_name = "shubham-vnet-prod"
-        address_prefixes     = ["10.0.1.0/25"]
+        address_prefixes     = ["10.0.1.128/25"]
     }
 
 }
